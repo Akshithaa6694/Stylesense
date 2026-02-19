@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StyleSense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- LOGIN PAGE -->
+    <div id="loginPage" class="page">
+        <div class="login-box">
+            <h1>StyleSense ✨</h1>
+            <p>AI Powered Fashion Stylist</p>
+
+            <input type="text" id="username" placeholder="Enter your name">
+            <button onclick="login()">Enter</button>
+        </div>
+    </div>
+
+    <!-- MAIN APP -->
+    <div id="appPage" class="page hidden">
+        <div class="container">
+            <h1>Welcome to StyleSense 👗</h1>
+            <p>Your Personal AI Fashion Advisor</p>
+
+            <form id="form">
+
+                <!-- ✅ GENDER SELECTION -->
+                <div class="input-group">
+                    <label>Select Gender</label>
+                    <select id="gender">
+                        <option value="Women">Women</option>
+                        <option value="Men">Men</option>
+                    </select>
+                </div>
+
+                <!-- ✅ CATEGORY SELECTION -->
+                <div class="input-group">
+                    <label>Select Category</label>
+                    <select id="category">
+                        <option value="Dress">Dress</option>
+                        <option value="Saree">Saree</option>
+                        <option value="Office Wear">Office Wear</option>
+                        <option value="Casual Wear">Casual Wear</option>
+                        <option value="Party Wear">Party Wear</option>
+                    </select>
+                </div>
+
+                <!-- EXISTING INPUTS -->
+                <div class="input-group">
+                    <input type="text" id="occasion" placeholder="Occasion" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" id="budget" placeholder="Budget" required>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="style" placeholder="Style Preference" required>
+                </div>
+
+                <button type="submit">Generate Outfits</button>
+            </form>
+
+            <div id="loader" class="loader hidden"></div>
+
+            <div id="results"></div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
